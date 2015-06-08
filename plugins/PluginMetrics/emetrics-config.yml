@@ -1,0 +1,6 @@
+# One or more of the plugins on your server use EMetrics.
+# To learn about EMetrics please visit https://github.com/turt2live/MetricsExtension
+# 
+# The value below is to turn on global logging for all EMetrics plugins.
+log-emetrics: false
+timeout-in-seconds: 30

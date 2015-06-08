@@ -1,0 +1,103 @@
+# This is the main configuration file for Cauldron.
+# 
+# If you need help with the configuration or have any questions related to Cauldron,
+# join us at the IRC or drop by our forums and leave a post.
+# 
+# IRC: #cauldron @ irc.esper.net ( http://webchat.esper.net/?channel=cauldron )
+# Forums: http://cauldron.minecraftforge.net/
+# 
+# Setting: logging.dump-heap-on-deadlock Default: false   # Dump the heap in the event of a deadlock (helps to debug the deadlock)
+# Setting: logging.entity-collision-checks Default: false   # Whether to log entity collision/count checks
+# Setting: world-settings.default.infinite-water-source Default: true   # Vanilla water source behavior - is infinite
+# Setting: settings.dump-materials Default: false   # Dumps all materials with their corresponding id's
+# Setting: logging.dump-chunks-on-deadlock Default: false   # Dump chunks in the event of a deadlock (helps to debug the deadlock)
+# Setting: logging.chunk-unload Default: false   # Log when chunks are unloaded (dev)
+# Setting: logging.world-leak-debug Default: false   # Log worlds that appear to be leaking (buggy)
+# Setting: logging.chunk-load Default: false   # Log when chunks are loaded (dev)
+# Setting: settings.entity-bounding-box-max-size Default: 1000   # Max size of an entity's bounding box before removing it (either being too large or bugged and 'moving' too fast)
+# Setting: logging.detailed-logging Default: false   # Add stack traces to dev logging
+# Setting: logging.entity-count-warn-size Default: 0   # Number of entities in one dimension logging a warning. Set to 0 to disable
+# Setting: logging.collision-warn-size Default: 200   # Number of colliding entities in one spot before logging a warning. Set to 0 to disable
+# Setting: logging.disabled-warnings Default: false   # Disable warning messages to server admins
+# Setting: settings.load-chunk-on-forge-tick Default: false   # Forces Chunk Loading during Forge Server Tick events
+# Setting: logging.entity-death Default: false   # Log when an entity is destroyed (dev)
+# Setting: fake-players.do-login Default: false   # Raise login events for fake players
+# Setting: logging.dump-threads-on-warn Default: false   # Dump the the server thread on deadlock warning (delps to debug the deadlock)
+# Setting: logging.entity-speed-removal Default: false   # Whether to log entity removals due to speed
+# Setting: logging.entity-spawn Default: false   # Log when living entities are spawned (dev)
+# Setting: debug.thread-contention-monitoring Default: false   # Set true to enable Java's thread contention monitoring for thread dumps
+# Setting: settings.check-entity-max-speeds Default: false   # Removes any entity that exceeds max speed.
+# Setting: world-settings.default.flowing-lava-decay Default: false   # Lava behaves like vanilla water when source block is removed
+# Setting: settings.check-entity-bounding-boxes Default: true   # Removes a living entity that exceeds the max bounding box size.
+# Setting: settings.load-chunk-on-request Default: true   # Forces Chunk Loading on 'Provide' requests (speedup for mods that don't check if a chunk is loaded
+# Setting: logging.tick-intervals Default: false   # Log when skip interval handlers are ticked
+# Setting: logging.entity-despawn Default: false   # Log when living entities are despawned (dev)
+# Setting: logging.connection Default: false   # Log connections
+# Setting: plugin-settings.default.remap-plugin-file Default: false   # Remap the plugin file (dev)
+
+logging:
+  dump-heap-on-deadlock: false
+  entity-collision-checks: false
+  dump-chunks-on-deadlock: false
+  chunk-unload: false
+  world-leak-debug: false
+  chunk-load: false
+  detailed-logging: false
+  entity-count-warn-size: 0
+  collision-warn-size: 200
+  disabled-warnings: false
+  entity-death: false
+  dump-threads-on-warn: false
+  entity-speed-removal: false
+  entity-spawn: false
+  tick-intervals: false
+  entity-despawn: false
+  connection: false
+world-settings:
+  default:
+    infinite-water-source: true
+    flowing-lava-decay: false
+    entity-despawn-immediate: false
+    worldgen-ESM-WorldGenFortress: true
+    worldgen-GraveStone-GraveStoneWorldGenerator: true
+settings:
+  dump-materials: false
+  entity-bounding-box-max-size: 1000
+  load-chunk-on-forge-tick: false
+  check-entity-max-speeds: false
+  check-entity-bounding-boxes: true
+  load-chunk-on-request: true
+fake-players:
+  do-login: false
+debug:
+  thread-contention-monitoring: false
+plugin-settings:
+  default:
+    remap-plugin-file: false
+    custom-class-loader: true
+    debug: false
+    remap-nms-v1_7_R4: true
+    remap-nms-v1_7_R3: true
+    remap-nms-v1_7_R1: true
+    remap-nms-v1_6_R3: true
+    remap-nms-v1_5_R3: true
+    remap-nms-pre: 'false'
+    remap-obc-v1_7_R4: true
+    remap-obc-v1_7_R3: true
+    remap-obc-v1_7_R1: true
+    remap-obc-v1_6_R3: true
+    remap-obc-v1_5_R3: true
+    remap-obc-pre: false
+    global-inheritance: true
+    plugin-inheritance: true
+    remap-reflect-field: true
+    remap-reflect-class: true
+    remap-allow-future: false
+config-version: 1
+world-environment-settings:
+  normal:
+    keep-world-loaded: true
+  nether:
+    keep-world-loaded: true
+  the_end:
+    keep-world-loaded: false
